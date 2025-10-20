@@ -21,23 +21,56 @@ This Python script automates engagement actions on TikTok for a specified user a
 
 ## Installation
 
+### Quick Setup (Recommended)
+
 1. Clone this repository:
 ```bash
 git clone https://github.com/mooneydenni-ctrl/engagement.git
 cd engagement
 ```
 
-2. Install required packages:
+2. Run the setup script:
+```bash
+./setup.sh
+```
+
+This will:
+- Create a virtual environment
+- Install all dependencies
+- Create a `.env` file from the template
+
+3. Edit the `.env` file with your credentials:
+```env
+TIKTOK_USERNAME=your_username
+TIKTOK_PASSWORD=your_password
+TARGET_USER=target_username
+```
+
+### Manual Setup
+
+1. Clone this repository:
+```bash
+git clone https://github.com/mooneydenni-ctrl/engagement.git
+cd engagement
+```
+
+2. Create and activate virtual environment (recommended):
+```bash
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+3. Install required packages:
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Create a `.env` file based on `.env.example`:
+4. Create a `.env` file based on `.env.example`:
 ```bash
 cp .env.example .env
 ```
 
-4. Edit the `.env` file with your credentials:
+5. Edit the `.env` file with your credentials:
 ```env
 TIKTOK_USERNAME=your_username
 TIKTOK_PASSWORD=your_password
@@ -153,6 +186,7 @@ TikTok's UI changes frequently. Element selectors may need updates if the script
 engagement/
 ├── tiktok_engagement.py   # Main script with TikTokEngagementBot class
 ├── example_usage.py       # Example usage scenarios
+├── setup.sh              # Automated setup script
 ├── requirements.txt        # Python dependencies
 ├── .env.example           # Example environment variables
 ├── .gitignore            # Git ignore file
