@@ -53,6 +53,19 @@ Run the script with default settings (like and save actions):
 python tiktok_engagement.py
 ```
 
+### Interactive Examples
+
+Run the example script to see different usage patterns:
+```bash
+python example_usage.py
+```
+
+This will present you with several example scenarios:
+1. Basic Engagement (like + save)
+2. Full Engagement (all actions)
+3. Custom Workflow (manual control)
+4. Like Only
+
 ### Advanced Usage
 
 You can customize the bot by modifying the `main()` function in `tiktok_engagement.py`:
@@ -63,6 +76,20 @@ actions = ['like', 'save', 'comment', 'share']
 
 # Run with custom settings
 bot.run(max_videos=20, actions=actions)
+```
+
+Or use it programmatically in your own scripts:
+
+```python
+from tiktok_engagement import TikTokEngagementBot
+
+bot = TikTokEngagementBot(
+    username="your_username",
+    password="your_password",
+    target_user="target_username"
+)
+
+bot.run(max_videos=10, actions=['like', 'save'])
 ```
 
 ### Customizing Comments
@@ -124,7 +151,8 @@ TikTok's UI changes frequently. Element selectors may need updates if the script
 
 ```
 engagement/
-├── tiktok_engagement.py   # Main script
+├── tiktok_engagement.py   # Main script with TikTokEngagementBot class
+├── example_usage.py       # Example usage scenarios
 ├── requirements.txt        # Python dependencies
 ├── .env.example           # Example environment variables
 ├── .gitignore            # Git ignore file
