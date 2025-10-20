@@ -1,0 +1,7 @@
+{
+  "username": "your_tiktok_username_or_email",
+  "password": "your_tiktok_password",
+  "target_user": "target_tiktok_username",
+  "headless": false,
+  "max_videos": 10
+}
